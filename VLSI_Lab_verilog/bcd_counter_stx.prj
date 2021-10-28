@@ -1,0 +1,2 @@
+verilog isim_temp "bcd_counter.v"
+verilog isim_temp "C:/Xilinx92i/verilog/src/glbl.v"

@@ -1,0 +1,3 @@
+MODULE bcd_counter_wave
+SUBMODULE bcd_counter
+INSTANCE UUT

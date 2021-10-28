@@ -1,0 +1,5 @@
+V3 4
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO isim_temp/glbl FL $XILINX/verilog/src/glbl.v
+FL $XILINX/VLSI_Lab_verilog/bcd_counter.v 2020/10/28.20:36:36 J.36
+MO isim_temp/bcd_counter FL $XILINX/VLSI_Lab_verilog/bcd_counter.v

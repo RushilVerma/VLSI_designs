@@ -1,0 +1,39 @@
+ command line:
+   ./bcd_counter_wave_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  57141
+
+Wed Oct 28 21:02:02 2020
+
+Total Line Count : 66
+
+ Elaboration time : 0 sec.
+
+ Estimate current memory usage : 157.925 Meg. 
+
+ Total Signals          : 12
+ Total Nets             : 14
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 11
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 160
+ntrace select -o on -n /bcd_counter_wave/dout 
+ntrace select -o on -n /bcd_counter_wave/PERIOD 
+ntrace select -o on -n /bcd_counter_wave/DUTY_CYCLE 
+ntrace select -o on -n /bcd_counter_wave/OFFSET 
+ntrace select -o on -n /bcd_counter_wave/clk 
+ntrace select -o on -n /bcd_counter_wave/reset 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Simulation time 0.40625 sec.
+
+ Estimate current memory usage : 163.561 Meg. 
+
+Wed Oct 28 23:13:08 2020
+

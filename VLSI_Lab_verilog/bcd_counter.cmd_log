@@ -1,0 +1,1 @@
+xst -ise "C:/Xilinx92i/VLSI_Lab_verilog/VLSI_Lab_verilog.ise" -intstyle ise -ifn bcd_counter.xst -ofn bcd_counter.syr

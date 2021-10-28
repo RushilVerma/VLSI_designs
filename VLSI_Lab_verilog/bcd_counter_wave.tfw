@@ -1,0 +1,66 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : bcd_counter_wave.tfw
+// /___/   /\     Timestamp : Wed Oct 28 21:01:41 2020
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: bcd_counter_wave
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module bcd_counter_wave;
+    reg clk = 1'b0;
+    reg reset = 1'b0;
+    wire [3:0] dout;
+
+    parameter PERIOD = 40;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    bcd_counter UUT (
+        .clk(clk),
+        .reset(reset),
+        .dout(dout));
+
+    initial begin
+        // -------------  Current Time:  118ns
+        #118;
+        reset = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  158ns
+        #40;
+        reset = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  758ns
+        #600;
+        reset = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  798ns
+        #40;
+        reset = 1'b0;
+        // -------------------------------------
+    end
+
+endmodule
+
